@@ -9,7 +9,7 @@ if(isset($_POST['organization'])){
   $ip_address = $_POST['ip_address'];
   $userId = $_SESSION['userId'];
 
-  $quertSuccess = mysqli_query($connection, "INSERT INTO kadet(organization,designation,name,org_ref_no,currentDate,diagnosa,qrHashKey,IP,description,userID) VALUES ('".$_POST['organization']."','".$_POST['designation']."','".$_POST['name']."','".$_POST['org_ref_no']."','$originalDate','".$_POST['diagnosa']."','$generateKeyQrCode', '$ip_address','".$_POST['description']."', '".$userId."')");
+  $quertSuccess = mysqli_query($connection, "INSERT INTO kadet(organization,designation,name,org_ref_no,currentDate,diagnosa,qrHashKey,IP,description,userID,faculty) VALUES ('".$_POST['organization']."','".$_POST['designation']."','".$_POST['name']."','".$_POST['org_ref_no']."','$originalDate','".$_POST['diagnosa']."','$generateKeyQrCode', '$ip_address','".$_POST['description']."', '".$userId."', ".$_POST['faculty']."')");
 
   if($quertSuccess == true){
 
